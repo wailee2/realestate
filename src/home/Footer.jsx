@@ -1,23 +1,51 @@
 import { useState, useEffect } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
+import Contactbut from '../components/ui/Contactbut';
+
+
 
 export default function Footer() {
+    const [time, setTime] = useState(new Date());
+    const [available, setAvailable] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        const now = new Date();
+        setTime(now);
+
+        // Example availability: 9 AM to 6 PM
+        const hours = now.getHours();
+        setAvailable(hours >= 9 && hours < 18);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <section
-            className="border-t-1 border-red-500 relative px-3 mb-9 md:px-4 lg:px-5 xl:px-[1.8%] space-y-7.5 "
-        >
-            <div className="md:flex">
-                <div className=" md:flex flex-row-reverse">
-                    <div>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div>img</div>
+        <section className="border-t-1 border-red-500 px-3 md:px-4 lg:px-5 xl:px-[1.8%] space-y-7.5">
+            <div className="md:flex justify-between">
+                <div>
+                    <ul className="space-y-2">
+                        <li className='outline-red-800'><Contactbut variant="link" /></li> {/* Contact text link */}
+                    </ul>
                 </div>
-                <div>acknow</div>
+                {/* Clock + availability */}
+                <div className="flex items-center gap-2">
+                    <span className="font-mono">{time.toLocaleTimeString()}</span>
+                    <span className={available ? "text-green-400" : "text-red-400"}>
+                        {available ? "we are open" : "We are closed" }
+                    </span>
+                </div>
+                
+                {/* Clock + availability */}
+                <div className="flex items-center gap-2">
+                <span className="font-raleway font-bold ">
+                    {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} WAT
+                </span>
+                <span className={available ? "text-green-400" : "text-red-400"}>
+                    {available ? "Available" : "Not Available"}
+                </span>
+                </div>
+                <div>© 2025 Your Company</div>
             </div>
         </section>
     );

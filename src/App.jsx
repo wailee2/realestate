@@ -14,7 +14,7 @@ export default function App(){
 
   return (
     <Router>
-      <div className="min-h-scrbeen bg-[#fcfcfc] text-black pt-b16">
+      <div className="min-h-scrbeen font-space bg-[#fcfcfc] text-black pt-b16">
          {/*<Navbar /> */}
 
         <Routes>

@@ -6,50 +6,50 @@ import { works } from "../data/data";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FeaturedWorks() {
-  const sectionRef = useRef(null);
+    const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray(".featured-card");
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+        const cards = gsap.utils.toArray(".featured-card");
 
-      cards.forEach((card) => {
-        const imgInner = card.querySelector(".img-inner");
-        const texts = card.querySelectorAll(".featured-text");
+        cards.forEach((card) => {
+          const imgInner = card.querySelector(".img-inner");
+          const texts = card.querySelectorAll(".featured-text");
 
-        gsap.fromTo(
-          imgInner,
-          { z: 0, scale: 1, transformOrigin: "center center" },
-          {
-            z: -140,
-            scale: 1.05,
-            duration: 1,
+          gsap.fromTo(
+            imgInner,
+            { z: 0, scale: 1, transformOrigin: "center center" },
+            {
+              z: -140,
+              scale: 1.05,
+              duration: 1,
+              ease: "power2.out",
+              overwrite: true,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 80%",
+                toggleActions: "play reverse none reverse",
+              },
+            }
+          );
+
+          gsap.from(texts, {
+            y: 20,
+            opacity: 0,
+            duration: 0.75,
             ease: "power2.out",
-            overwrite: true,
+            stagger: 0.12,
             scrollTrigger: {
               trigger: card,
-              start: "top 80%",
-              toggleActions: "play reverse none reverse",
+              start: "top 70%",
+              toggleActions: "play none",
             },
-          }
-        );
-
-        gsap.from(texts, {
-          y: 20,
-          opacity: 0,
-          duration: 0.75,
-          ease: "power2.out",
-          stagger: 0.12,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 70%",
-            toggleActions: "play none",
-          },
+          });
         });
-      });
-    }, sectionRef);
+      }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+      return () => ctx.revert();
+    }, []);
 
   return (
     <section

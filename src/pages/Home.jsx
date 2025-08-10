@@ -3,7 +3,8 @@ import About from '../home/About';
 import FeaturedWorks from '../home/Works';
 import Process from '../home/Process';
 import Testimonials from '../home/Testimonials';
-//import Footer from './Footer';
+import Contact from '../home/Contact';
+import Footer from '../home/Footer';
 
 export default function Home() {
   
@@ -15,6 +16,8 @@ export default function Home() {
         <FeaturedWorks />
         <Process />
         <Testimonials />
+        <Contact />
+        <Footer />
       </div>
       {/*
       <Filter onFilterChange={handleFilter} />

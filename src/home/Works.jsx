@@ -41,8 +41,8 @@ export default function FeaturedWorks() {
           stagger: 0.12,
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",
-            toggleActions: "play reverse none reverse",
+            start: "top 70%",
+            toggleActions: "play none",
           },
         });
       });
@@ -66,20 +66,20 @@ export default function FeaturedWorks() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-15 mt-10 overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-x-5 gap-y-10 md:gap-y-15 mt-10 overflow-hidden">
           {works.map((work, index) => {
             // classes and styles can come from data
             const viewportClass = work.viewportClass || "";
             const imgClass = work.imgClass || "w-full h-64 object-cover";
             const viewportStyle = work.viewportStyle || { perspectsive: 1200 };
-            
             const divClass = work.divClass || "";
+            const div2Class = work.div2Class || "";
 
             return (
-              <div key={index} className="featured-card">
+              <div key={index} className="featured-card bga-red-700">
                 {/* viewport accepts custom classes or inline styles */}
                 <div
-                  className={`img-viewport w-full overflow-hidden bg-purple-500  relative ${viewportClass}`}
+                  className={`img-viewport w-full overflow-hidden  relative ${viewportClass}`}
                   style={viewportStyle}
                 >
                   <div
@@ -94,16 +94,21 @@ export default function FeaturedWorks() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center">
-                  <div className="flex gap-4 md:gap-5 items-center">
-                    <span className="featured-text text-sm  xl:text-xl font-semibold">
-                      {work.no}
-                    </span>
-                    <h3 className="featured-text text-sm uppercase  xl:text-xl font-semibold">
-                      {work.title}
-                    </h3>
+                <div
+                  className={`flenx justify-between bg-remd-900 items-center ${div2Class}`}
+                >
+                  <div></div>
+                  <div>
+                    <div className="flex gap-4 md:gap-5 items-center">
+                      <span className="featured-text text-sm  xl:text-xl font-semibold">
+                        {work.no}
+                      </span>
+                      <h3 className="featured-text text-sm uppercase  xl:text-xl font-semibold">
+                        {work.title}
+                      </h3>
+                    </div>
+                    <p className="featured-text text-sm xl:text-xl text-gray-600">{work.desc}</p>
                   </div>
-                  <p className="featured-text text-sm xl:text-xl text-gray-600">{work.desc}</p>
                 </div>
               </div>
             );

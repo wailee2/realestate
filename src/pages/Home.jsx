@@ -1,6 +1,8 @@
 import Hero from '../home/Hero';
 import About from '../home/About';
-import Works from '../home/Works';
+import FeaturedWorks from '../home/Works';
+import Process from '../home/Process';
+import Testimonials from '../home/Testimonials';
 //import Footer from './Footer';
 
 export default function Home() {
@@ -10,7 +12,9 @@ export default function Home() {
       <Hero />
       <div className='relative z-10'>
         <About />
-        <Works />
+        <FeaturedWorks />
+        <Process />
+        <Testimonials />
       </div>
       {/*
       <Filter onFilterChange={handleFilter} />

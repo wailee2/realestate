@@ -1,4 +1,4 @@
-// Import your images
+// Feature Works
 import img1 from "../assets/featured/featured02.jpg";
 import img2 from "../assets/featured/featured01.jpg";
 import img3 from "../assets/featured/featured03.jpg";
@@ -19,7 +19,8 @@ export const works = [
     title: "Tall Tower",
     desc: "Vertical office block.",
     img: img2,
-    viewportClass: "", 
+    viewportClass: "",
+    div2Class: "flex",
     divClass: "flex-row",
     imgClass: "w-[80%] md:w-full"
     //viewportStyle: { perspective: 1200, width: "100%", height: "420px" },
@@ -39,7 +40,8 @@ export const works = [
     title: "Wide Plaza",
     desc: "Public urban space.",
     img: img2,
-    divClass: "flex-col bg-green-900 ",
+    div2Class: "md:flex block",
+    divClass: "flex-col ",
     imgClass: "w-[70%] md:w-[100%]"
   },
   {
@@ -48,6 +50,7 @@ export const works = [
     desc: "Public urban space.",
     viewportClass: "",
     img: img3,
+    div2Class: " flex md:block",
     divClass: "flex-row",
     imgClass: "w-[80%] md:w-[100%]",
   },
@@ -56,7 +59,8 @@ export const works = [
     title: "Wide Plaza",
     desc: "Public urban space.",
     img: img2,
-    divClass: "flex-col md:flex-row bg-green-900 ",
+    div2Class: "md:flex block",
+    divClass: "flex-col md:flex-row ",
     imgClass: "w-[70%] md:w-[80%]"
   },
 ];

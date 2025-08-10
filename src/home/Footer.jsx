@@ -28,22 +28,15 @@ export default function Footer() {
                         <li className='outline-red-800'><Contactbut variant="link" /></li> {/* Contact text link */}
                     </ul>
                 </div>
-                {/* Clock + availability */}
-                <div className="flex items-center gap-2">
-                    <span className="font-mono">{time.toLocaleTimeString()}</span>
-                    <span className={available ? "text-green-400" : "text-red-400"}>
-                        {available ? "we are open" : "We are closed" }
-                    </span>
-                </div>
                 
                 {/* Clock + availability */}
-                <div className="flex items-center gap-2">
-                <span className="font-raleway font-bold ">
-                    {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} WAT
-                </span>
-                <span className={available ? "text-green-400" : "text-red-400"}>
-                    {available ? "Available" : "Not Available"}
-                </span>
+                <div className="flex items-center gap-2 text-sm font-semibold">
+                    <span className="">
+                        {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} WAT,
+                    </span>
+                    <span className={available ? "text-green-400" : "text-red-400 uppercase"}>
+                        {available ? "We are Open" : "We Are Closed"}
+                    </span>
                 </div>
                 <div>© 2025 Your Company</div>
             </div>

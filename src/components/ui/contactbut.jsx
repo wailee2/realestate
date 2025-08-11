@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
+import HoverSwapText2 from './HoverSwapText2';
 
 export default function Contactbut({ variant = "button", label }) {
     const [open, setOpen] = useState(false);
@@ -29,12 +30,16 @@ export default function Contactbut({ variant = "button", label }) {
                 onClick={handleOpen}
                 className={
                     variant === "link"
-                        ? "text-green-500 cursor-pointer"
-                        : "p-3 bg-red-800 text-white font-medium rounded-4xl hover:bg-green-600 transition cursor-pointer"
+                    ? "text-green-500 cursor-pointer"
+                    : "p-3 bg-red-800 text-white font-medium rounded-4xl hover:bg-green-600 transition cursor-pointer"
                 }
-            >
-                {label || (variant === "link" ? "Contact Us" : "Get Started Now")}
+                >
+                <HoverSwapText2
+                    text={label || (variant === "link" ? "Contact Us" : "Get Started Now")}
+                    className={variant === "link" ? "text-green-500" : "text-white"}
+                />
             </div>
+
 
             {/* Backdrop */}
             {visible && (

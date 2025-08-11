@@ -54,7 +54,7 @@ export default function FeaturedWorks() {
   return (
     <section
       ref={sectionRef}
-      className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-10 overflow-x-hidden"
+      className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-8 overflow-x-hidden"
     >
       <div>
         <div className="md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%]">
@@ -76,7 +76,7 @@ export default function FeaturedWorks() {
             const div2Class = work.div2Class || "";
 
             return (
-              <div key={index} className="featured-card bga-red-700">
+              <div key={index} className="featured-card">
                 {/* viewport accepts custom classes or inline styles */}
                 <div
                   className={`img-viewport w-full overflow-hidden  relative ${viewportClass}`}
@@ -95,7 +95,7 @@ export default function FeaturedWorks() {
                 </div>
 
                 <div
-                  className={`flenx justify-between bg-remd-900 items-center ${div2Class}`}
+                  className={` ${div2Class}`}
                 >
                   <div></div>
                   <div>

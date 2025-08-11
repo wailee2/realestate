@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Contactbut from '../components/ui/Contactbut';
-
+import testimonialimg3 from "../assets/featured/featured02.jpg";
 
 
 export default function Footer() {
@@ -23,9 +23,18 @@ export default function Footer() {
     return (
         <section className="border-t-1 border-red-500 px-3 md:px-4 lg:px-5 xl:px-[1.8%] space-y-7.5">
             <div className="md:flex justify-between">
+                <div className="md:madx-w-[25%] h-a">
+                    <img src={testimonialimg3} alt="" className="w-full" />
+
+                </div>
                 <div>
+                    <span className="uppercase font-medium">(Navigation)</span>
+               
                     <ul className="space-y-2">
-                        <li className='outline-red-800'><Contactbut variant="link" /></li> {/* Contact text link */}
+                        <li>Home</li>
+                        <li className=''><Contactbut variant="link" /></li>
+                        <li>Terms and condition</li>
+                        <li>Privacy policy</li>
                     </ul>
                 </div>
                 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 export default function Contactbut({ variant = "button", label }) {
@@ -34,7 +33,7 @@ export default function Contactbut({ variant = "button", label }) {
                         : "p-3 bg-red-800 text-white font-medium rounded-4xl hover:bg-green-600 transition cursor-pointer"
                 }
             >
-                {label || (variant === "link" ? "Contact" : "Get Started Now")}
+                {label || (variant === "link" ? "Contact Us" : "Get Started Now")}
             </div>
 
             {/* Backdrop */}
@@ -58,7 +57,7 @@ export default function Contactbut({ variant = "button", label }) {
                         onClick={handleClose}
                         className="absolute top-4 right-4 text-3xl hover:text-red-500 transition"
                     >
-                        <IoClose />
+                        <IoClose />Close
                     </button>
 
                     <div className="p-8 mt-10">

@@ -19,7 +19,7 @@ export default function About() {
                 </h2>
             </div>
             <div className="relative w-full mt-5">
-                <div className="relative min-h-[500px] lg:min-h-[750px]">
+                <div className="relative min-h-[100vh] md:min-h-[115vh]">
                     <div className=" lg:absolute right-0 space-y-5">
                         <div className="flex lg:gap-8">
                             <div>

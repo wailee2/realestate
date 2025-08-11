@@ -21,22 +21,30 @@ export default function Footer() {
     }, []);
 
     return (
-        <section className="border-t-1 border-red-500 px-3 md:px-4 lg:px-5 xl:px-[1.8%] space-y-7.5">
-            <div className="md:flex justify-between">
-                <div className="md:madx-w-[25%] h-a">
+        <section className="border-t-1 border-red-500 px-3 md:px-4 lg:px-5 xl:px-[1.8%] pt-8 space-y-7.5 ">
+            <div className="md:flex flex-row-reverse justify-between gap-[10%]">
+                <div className="flex-1 md:flex justify-between">
+                    <div className=" ">
+                        <span className="uppercase font-semibold">(Navigation)</span>
+
+                        <ul className="space-y-1 capitalize cursor-pointer mt-3 font-semibold text-4xl md:text-4xl xl:text-5xl tracking-tighter">
+                            <li>Home</li>
+                            <li>Works</li>
+                            <li>Studio</li>
+                            <li>Process</li>
+                            <li>Gallery</li>
+                            <li className=''><Contactbut variant="link" /></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span className="uppercase font-semibold">(Acknowledgment)</span>
+                    </div>
+                </div>
+                <div className="md:max-w-[25%] flex-1">
                     <img src={testimonialimg3} alt="" className="w-full" />
 
                 </div>
-                <div>
-                    <span className="uppercase font-medium">(Navigation)</span>
-               
-                    <ul className="space-y-2">
-                        <li>Home</li>
-                        <li className=''><Contactbut variant="link" /></li>
-                        <li>Terms and condition</li>
-                        <li>Privacy policy</li>
-                    </ul>
-                </div>
+            </div>
                 
                 {/* Clock + availability */}
                 <div className="flex items-center gap-2 text-sm font-semibold">
@@ -48,7 +56,7 @@ export default function Footer() {
                     </span>
                 </div>
                 <div>© 2025 Your Company</div>
-            </div>
+            
         </section>
     );
 }

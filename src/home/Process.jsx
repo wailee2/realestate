@@ -11,7 +11,7 @@ export default function Process() {
       <div>
         <div className="block md:flex md:gap-10 lg:gap-25 xl:gap-30 overflow-hidden">
             <div className="flex flex-col gap-y-3 flex-1/8">
-                <span className="uppercase font-medium">(Our Process)</span>
+                <span className="uppercase font-semibold">(Our Process)</span>
                 <div
                     className="w-full overflow-hidden">
                     <img src={processimg} alt="" className="w-full h-full object-cover"/>

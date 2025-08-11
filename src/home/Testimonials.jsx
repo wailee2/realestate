@@ -24,7 +24,7 @@ export default function Testimonial() {
       <section
         className="relative w-full overflow-hidden bg-gray-50 mb-17 px-3 md:px-4 lg:px-5 xl:px-[1.8%]">
         <div className="mb-3">
-          <span className="uppercase font-medium">(hear from our clients)</span>
+          <span className="uppercase font-semibold">(hear from our clients)</span>
         </div>
         <div className="overflow-hidden w-full">
           <div

@@ -29,7 +29,7 @@ export default function Contactbut({ variant = "button", label }) {
                 onClick={handleOpen}
                 className={
                     variant === "link"
-                        ? "text-green-500 hover:underline cursor-pointer"
+                        ? "text-green-500 cursor-pointer"
                         : "p-3 bg-red-800 text-white font-medium rounded-4xl hover:bg-green-600 transition cursor-pointer"
                 }
             >

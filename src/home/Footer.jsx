@@ -1,6 +1,7 @@
 import { useState, useEffect, } from "react";
 import Contactbut from '../components/ui/Contactbut';
 import HoverSwapText2 from '../components/ui/HoverSwapText2';
+import HoverUnderline from '../components/ui/HoverUnderline';
 import testimonialimg3 from "../assets/featured/featured02.jpg";
 import { Link } from "react-router-dom";
 
@@ -24,7 +25,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <section className="border-t-1 border-red-500 px-3 md:px-4 lg:px-5 xl:px-[1.8%] pt-8 pb-3.5 space-y-10 md:space-y-20 ">
+        <section className="border-t-1 border-gray-200 px-3 md:px-4 lg:px-5 xl:px-[1.8%] pt-8 pb-3.5 space-y-10 md:space-y-20 ">
             <div className="md:flex flex-row-reverse justify-between space-y-9.5 md:gap-[6%] lg:gap-[0]">
                 <div className="space-y-9.5 flex-1 md:flex justify-around">
                     <div className=" ">
@@ -117,45 +118,43 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex flex-col ">
-                    <Link to="/privacy" className="hover:underline transition-all duration-1000">
-                        Privacy Policy
-                    </Link>
-                    <Link to="/terms" className="hover:underline transition-all duration-1000">
-                        Terms of Service
-                    </Link>
+                    <HoverUnderline
+                        text="Privacy Policy"
+                        to="/privacy"
+                        className=""
+                    />
+
+                    <HoverUnderline
+                        text="Terms of Service"
+                        to="/terms"
+                        className=""
+                    />
+
                 </div>
                 <div className="flex flex-col ">
                     <div>
-                        <a
-                            href="https://instagram.com/yourprofile"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline transition-all duration-1000"
-                            >
-                            Instagram
-                        </a>
-
+                        <HoverUnderline
+                            text="Instagram"
+                            href="https://instagram.com/YOUR_USERNAME"
+                            className="group text-black cursor-pointer"
+                        />
                     </div>
                     <div>
-                        <a
-                            href="https://facebook.com/yourprofile"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline transition-all duration-1000"
-                        >
-                            Facebook
-                        </a>
+                        <HoverUnderline
+                            text="Facebook"
+                            href="https://facebook.com/YOUR_USERNAME"
+                            className="group text-black cursor-pointer"
+                        />
                     </div>
                 </div>
-                <div className="uppercase"><span >Made by 
-                    <a
-                        href="https://x.com/no9heroo"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline ml-1"
-                    >
-                        WAILEE
-                    </a></span>
+                <div className="uppercase">
+                    <span >Made by 
+                        <HoverUnderline
+                            text="wailee"
+                            href="https://x.com/no9heroo"
+                            className="ml-1 text-black cursor-pointer"
+                        />
+                    </span>
                 </div>
                
                 

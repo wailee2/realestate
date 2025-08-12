@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Contactbut from '../components/ui/Contactbut';
 import Menu from '../components/ui/Menu';
-
+import logo from '../assets/icon.png'
 
 export default function Header() {
   const [headerHidden, setHeaderHidden] = useState(false);
@@ -35,18 +35,21 @@ export default function Header() {
       >
         <div className=" px-6 py-4 flex items-center justify-between uppercase">
             {/* Logo */}
-            <div className="text-xl font-bold">Wailee</div>
-
+            <div className="text-xl font-bold flex items-center">
+                <div className="w-20">
+                <img src={logo} alt="Logo" className="w-full"/></div>
+                <span>Kola Illori & Co</span></div>
+            <div></div>
             {/* Nav list */}
-            <ul className="hidden md:flex gap-8 uppercase text-sm ">
-                <li><a href="#works" className="hover:text-green-600">Works</a></li>
-                <li><a href="#studio" className="hover:text-green-600">Studio</a></li>
-                <li><a href="#process" className="hover:text-green-600">Process</a></li>
-                <li><a href="#gallery" className="hover:text-green-600">Gallery</a></li>
+            <ul className="hidden md:flex gap-8 uppercase font-semibold text-sm ">
+                <li><a href="#works" className=" ">Works</a></li>
+                <li><a href="#studio" className=" ">Studio</a></li>
+                <li><a href="#process" className=" ">Process</a></li>
+                <li><a href="#gallery" className=" ">Gallery</a></li>
             </ul>
                 
             <div className="flex items-center">
-                <div className="hidden md:block">
+                <div className="">
                     <Contactbut
                         variant="button"
                         colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"

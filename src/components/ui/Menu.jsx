@@ -3,12 +3,16 @@ import HoverSwapText from "../ui/HoverSwapText2";
 
 export default function Menu({ className = "" }) {
   const [open, setOpen] = useState(false);
+  const [transitionDuration, setTransitionDuration] = useState("500ms");
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (open) {
+      // Opening - slower transition
+      setTransitionDuration("500ms");
       document.body.style.overflow = "hidden";
     } else {
+      // Closing - faster transition
+      setTransitionDuration("800ms");
       document.body.style.overflow = "";
     }
     return () => {
@@ -26,9 +30,13 @@ export default function Menu({ className = "" }) {
       </button>
 
       <div
-        className={`fixed top-0 left-0 w-full bg-black overflow-hidden transition-[height] duration-500 ease-in-out
+        className={`fixed top-0 left-0 w-full bg-black overflow-hidden ease-in-out
           ${open ? "h-screen pointer-events-auto" : "h-0 pointer-events-none"}`}
-        style={{ zIndex: 9999 }}
+        style={{
+          zIndex: 9999,
+          transitionProperty: "height",
+          transitionDuration: transitionDuration,
+        }}
       >
         <button
           onClick={() => setOpen(false)}

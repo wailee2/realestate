@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Contactbut from '../components/ui/Contactbut';
+import Menu from '../components/ui/Menu';
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -26,26 +27,18 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 right-0  z-20 transition-transform duration-500 ease-in-out
+      className={`fixed top-0 right-0 w-full z-20 transition-transform duration-500 ease-in-out
         ${visible ? "translate-y-0" : "-translate-y-full"}`}
-      style={{ width: "auto" }}
+      // Remove inline style here
     >
-      <div className="flex items-center gap-4 px-6 py-4">
-        <div className="flex justify-center uppercase">
-            <Contactbut
-                variant="button"
-                colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"
-                label="get in touch "
-            />
-        </div>
+      <div className="flex items-center gap-4 px-6 py-4 justify-end">
+        <Contactbut
+          variant="button"
+          colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"
+          label="get in touch "
+        />
 
-        <button
-          aria-label="Menu"
-          className={`p-2 rounded border bg-red-700 border-gray-400 hover:bg-gray-100 transition
-            `}
-        >
-          Menu
-        </button>
+        <Menu className="text-black bg-[#f2f0eb] rounded-full uppercase font-semibold cursor-pointer tracking-wide pt-[10px]" />
       </div>
     </nav>
   );

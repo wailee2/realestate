@@ -22,7 +22,7 @@ export default function FeaturedWorks() {
             { z: 0, scale: 1, transformOrigin: "center center" },
             {
               z: -140,
-              scale: 1.05,
+              scale: 1.1,
               duration: 1,
               ease: "power2.out",
               overwrite: true,

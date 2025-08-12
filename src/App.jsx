@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react'
 import './index.css'
 import Home from "./pages/Home";
+import Works from "./pages/Works";
 
 
 export default function App(){
@@ -14,11 +15,12 @@ export default function App(){
 
   return (
     <Router>
-      <div className="min-h-scrbeen font-space bg-[#fcfcfc] text-black pt-b16">
+      <div className="font-space bg-[#fcfcfc] text-black pt-b16">
          {/*<Navbar /> */}
 
         <Routes>
-          <Route path="/" element={<Home />} />{/*<Navbar /> 
+          <Route path="/" element={<Home />} />
+          <Route path="/works" element={<Works />} />{/*
           <Route path="/listings" element={<Listings />} />
           <Route path="/property/:id" element={<PropertyDetail />} />
           <Route path="/about" element={<About />} />

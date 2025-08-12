@@ -5,7 +5,12 @@
 @import "tailwindcss";
 
 @theme{
-    --font-space: "Space Grotesk", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  @keyframes underline-slide {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+  }
 }
 
 html {
@@ -18,3 +23,4 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+

@@ -1,5 +1,6 @@
 import processimg from "../assets/featured/featured03.jpg";
-
+import AnimatedText from "../components/ui/AnimatedText";
+import AnimatedWord from "../components/ui/AnimatedWord";
 
 export default function Process() {
 
@@ -27,10 +28,22 @@ export default function Process() {
             <div className="flex-1/2">
                 <div className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold md:max-w-[90%] lg:max-w-[87%] xl:max-w-[75%] tracking-tight space-y-17">
                     <div>
-                        Our approach at OH Architecture is designed to make your journey from concept to completion as smooth and enjoyable as possible.
+                        <AnimatedWord
+                            text="Our approach at OH Architecture is designed to make your journey from concept to completion as smooth and enjoyable as possible."
+                            className=""
+                            useGsap={true}
+                            stagger={0.08}
+                            duration={0.5}
+                        />
                     </div>
                     <div>
-                        With our 6-stage process, we prioritise clarity, collaboration, and your unique vision. At every step, we'll keep you informed, inspired, and involved.
+                        <AnimatedWord
+                            text="With our 6-stage process, we prioritise clarity, collaboration, and your unique vision. At every step, we'll keep you informed, inspired, and involved."
+                            className=""
+                            useGsap={true}
+                            stagger={0.08}
+                            duration={0.5}
+                        />
                     </div>
                 </div>
                 
@@ -40,3 +53,5 @@ export default function Process() {
     </section>
   );
 }
+
+

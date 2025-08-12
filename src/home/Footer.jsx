@@ -4,6 +4,7 @@ import HoverSwapText2 from '../components/ui/HoverSwapText2';
 import HoverUnderline from '../components/ui/HoverUnderline';
 import testimonialimg3 from "../assets/featured/featured02.jpg";
 import { Link } from "react-router-dom";
+import React from "react";
 
 
 
@@ -159,6 +160,9 @@ export default function Footer() {
                
                 
             </div>
+            
         </section>
     );
 }
+
+

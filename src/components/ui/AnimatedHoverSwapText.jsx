@@ -38,6 +38,7 @@ export default function AnimatedHoverSwapText({
           opacity: 0;
           transform: translateY(6px);
           will-change: transform, opacity;
+          line-height: 1em;
         }
         .ahst-wrapper-fadeout {
           animation: ahst-fadeOut 0.6s ease forwards;
@@ -117,10 +118,14 @@ export default function AnimatedHoverSwapText({
     }
   }, [isVisible, useGsap, loop, stagger, duration, fadeOut, outDelay, chars.length]);
 
-  // Inner structure for hover swap
+  // Fixed Inner structure
   const Inner = () => (
     <>
-      <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">
+      {/* Top text (animated letters) */}
+      <span
+        className="block relative h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
+        style={{ display: "inline-flex" }}
+      >
         {chars.map((ch, i) => (
           <span
             key={`${ch}-${i}-top`}
@@ -131,7 +136,12 @@ export default function AnimatedHoverSwapText({
           </span>
         ))}
       </span>
-      <span className="block absolute top-full left-0 transition-transform duration-300 ease-out group-hover:-translate-y-full">
+
+      {/* Bottom text (slides in on hover) */}
+      <span
+        className="block absolute top-full left-0 h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
+        style={{ whiteSpace: "nowrap" }}
+      >
         {text}
       </span>
     </>

@@ -16,7 +16,7 @@ export default function App(){
 
   return (
     <Router>
-      <div className="font-space bg-[#fcfcfc] text-black pt-b16 tracking-tighter">
+      <div className="font-space bg-[#fcfcfc] text-black pt-b16 tracking-tights">
          <Header />
 
         <Routes>

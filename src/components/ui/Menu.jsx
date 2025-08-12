@@ -40,9 +40,10 @@ export default function Menu({ className = "" }) {
             }}
         >
 
-        <div className="px-6 py-3 h-screen  font-semibold flex flex-col justify-between text-white">
+        <div
+            className="px-6 pt-3 pb-5 h-screen  font-semibold flex flex-col justify-between text-white">
             <div className="flex justify-between items-center ">
-                <span className="font-bold text-[24px] md:text-[40px] lg:text-[45px] xl:text-[56px]">KOLAILLORI & CO</span>
+                <span className="font-bold text-[24px] md:text-[40px] lg:text-[45px] xl:text-[54px]">KOLAILLORI & CO</span>
                 <button
                 onClick={() => setOpen(false)}
                 className="text-white text-sm font-semibold"

@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="fixed w-full bottom-0 block sm:flex justify-between items-end py-5 space-y-3.5 sm:space-y-0 px-5 z-20">
         <div className="sm:max-w-[25rem] md:max-w-[30rem] lg:max-w-[35rem]">
           <h1 className="split-heading text-[20px] md:text-[27px] lg:text-[30px] xl:text-[33px] tracking-tighter font-medium leading-tight">
-            The OH Architecture style is defined by strong, solid forms with subtle elegance, natural balance and enduring appeal
+            The Kola Illori & Co approach is defined by precision, integrity and timeless value, combining solid expertise with balanced market insight.
           </h1>
         </div>
 

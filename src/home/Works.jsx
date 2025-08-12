@@ -57,19 +57,19 @@ export default function FeaturedWorks() {
     <section
       ref={sectionRef}
       className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-8 overflow-x-hidden "
-      id="works"
+      id="services"
     >
       <div>
         <div className="flex flex-col  md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%] uppercase">
           <AnimatedText
-            text="Featured"
+            text="Portfolio"
             className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium"
             useGsap={true}
             stagger={0.08}
             duration={0.5}
           />
           <AnimatedText
-            text="works"
+            text="Highlights"
             className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium"
             useGsap={true}
             stagger={0.08}

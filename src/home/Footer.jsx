@@ -3,6 +3,7 @@ import Contactbut from '../components/ui/Contactbut';
 import HoverSwapText2 from '../components/ui/HoverSwapText2';
 import HoverUnderline from '../components/ui/HoverUnderline';
 import testimonialimg3 from "../assets/featured/featured02.jpg";
+import logo from '../assets/icon.png'
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -42,15 +43,15 @@ export default function Footer() {
                             </li>
                             <li>
                                 <HoverSwapText2
-                                text="Works"
-                                href="/works"
+                                text="Services"
+                                href="/services"
                                 className="cursor-pointer"
                                 />
                             </li>
                             <li>
                                 <HoverSwapText2
-                                text="Studio"
-                                href="/studio"
+                                text="about"
+                                href="/about"
                                 className="cursor-pointer"
                                 />
                             </li>
@@ -63,8 +64,8 @@ export default function Footer() {
                             </li>
                             <li>
                                 <HoverSwapText2
-                                text="Gallery"
-                                href="/gallery"
+                                text="Portfolio"
+                                href="/portfolio"
                                 className="cursor-pointer"
                                 />
                             </li>
@@ -109,7 +110,7 @@ export default function Footer() {
                 </div>
                 <div className="md:max-w-[25%] flex-1">
                     <img src={testimonialimg3} alt="" className="w-full" />
-
+                    <img src={logo} alt="Logo" className="w-full"/>
                 </div>
             </div>
             <div className="gap-x-[7%] gap-y-5 flex justify-between md:items-end flex-wrap text-sm font-bold uppercase">

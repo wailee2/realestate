@@ -66,15 +66,15 @@ export default function Menu({ className = "" }) {
                 </li>
                 <li>
                     <AnimatedHoverSwapText
-                    text="Works"
-                    href="/works"
+                    text="Services"
+                    href="/services"
                     className="cursor-pointer"
                     />
                 </li>
                 <li>
                     <AnimatedHoverSwapText
-                    text="Studio"
-                    href="/studio"
+                    text="About"
+                    href="/about"
                     className="cursor-pointer"
                     />
                 </li>
@@ -87,8 +87,8 @@ export default function Menu({ className = "" }) {
                 </li>
                 <li>
                     <AnimatedHoverSwapText
-                    text="Gallery"
-                    href="/gallery"
+                    text="portfolio"
+                    href="/portfolio"
                     className="cursor-pointer"
                     />
                 </li>

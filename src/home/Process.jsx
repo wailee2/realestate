@@ -16,10 +16,30 @@ export default function Process() {
                     className="w-full overflow-hidden">
                     <img src={processimg} alt="" className="w-full h-full object-cover"/>
                 </div>
-                <div>
-                    <div>
+                <div className="capitalise hidden">
+                    <div className="flex gap-2">
                         <span>(01)</span>
-                        <div className="capitalise">Sketch Design</div>
+                        <div>Sketch Design</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <span>(02)</span>
+                        <div>Sketch Design</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <span>(03)</span>
+                        <div>Sketch Design</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <span>(04)</span>
+                        <div>Sketch Design</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <span>(05)</span>
+                        <div>Sketch Design</div>
+                    </div>
+                    <div className="flex gap-2">
+                        <span>(06)</span>
+                        <div>Sketch Design</div>
                     </div>
                 </div>
 
@@ -28,7 +48,7 @@ export default function Process() {
                 <div className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold md:max-w-[90%] lg:max-w-[87%] xl:max-w-[75%] space-y-3 tracking-tighter">
                     <div>
                         <AnimatedWord
-                            text="Our approach at OH Architecture is designed to make your journey from concept to completion as smooth and enjoyable as possible."
+                            text="Our approach at Kola Illori & Co is designed to make your journey from first consultation to final handover smooth, transparent, and rewarding."
                             className=""
                             useGsap={true}
                             stagger={0.08}
@@ -37,7 +57,7 @@ export default function Process() {
                     </div>
                     <div>
                         <AnimatedWord
-                            text="With our 6-stage process, we prioritise clarity, collaboration, and your unique vision. At every step, we'll keep you informed, inspired, and involved."
+                            text="With our structured 6-stage process, we prioritise clarity, collaboration, and your goals. At every step, we keep you informed, engaged, and confident in each decision."
                             className=""
                             useGsap={true}
                             stagger={0.08}

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Contactbut from '../components/ui/Contactbut';
+import HoverSwapText2 from "./ui/HoverSwapText2";
 import Menu from '../components/ui/Menu';
-import logo from '../assets/icon.png'
+
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [headerHidden, setHeaderHidden] = useState(false);
@@ -34,22 +36,45 @@ export default function Header() {
           ${headerHidden ? "-translate-y-full" : "translate-y-0"}`}
       >
         <div className=" px-6 py-4 flex items-center justify-between uppercase">
-            {/* Logo */}
-            <div className="text-xl font-bold flex items-center">
-                <div className="w-20">
-                <img src={logo} alt="Logo" className="w-full"/></div>
-                <span>Kola Illori & Co</span></div>
+            <Link
+                to="/"
+                className="font-bold ">
+                <span className="text-[22px] md:text-[30px] lg:text-[40px]">Kola Illori & Co</span>
+            </Link>
             <div></div>
-            {/* Nav list */}
             <ul className="hidden md:flex gap-8 uppercase font-semibold text-sm ">
-                <li><a href="#works" className=" ">Works</a></li>
-                <li><a href="#studio" className=" ">Studio</a></li>
-                <li><a href="#process" className=" ">Process</a></li>
-                <li><a href="#gallery" className=" ">Gallery</a></li>
+                <li>
+                    <HoverSwapText2
+                    text="Services"
+                    href="#services"
+                    className="cursor-pointer"
+                    />
+                </li>
+                <li>
+                    <HoverSwapText2
+                    text="about"
+                    href="#about"
+                    className="cursor-pointer"
+                    />
+                </li>
+                <li>
+                    <HoverSwapText2
+                    text="Process"
+                    href="#process"
+                    className="cursor-pointer"
+                    />
+                </li>
+                <li>
+                    <HoverSwapText2
+                    text="portfolio"
+                    href="#portfolio"
+                    className="cursor-pointer"
+                    />
+                </li>
             </ul>
                 
             <div className="flex items-center">
-                <div className="">
+                <div className="hidden md:block">
                     <Contactbut
                         variant="button"
                         colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"

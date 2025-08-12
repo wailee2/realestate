@@ -13,11 +13,12 @@ export default function AnimatedHoverSwapText({
 }) {
   const wrapperRef = useRef(null);
   const lettersRef = useRef([]);
+  const gsapRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const STYLE_ID = "animated-hover-swap-text-styles";
   const chars = Array.from(text || "");
 
-  // Inject styles once
+  /** Inject styles once */
   useEffect(() => {
     if (!document.getElementById(STYLE_ID)) {
       const style = document.createElement("style");
@@ -48,7 +49,18 @@ export default function AnimatedHoverSwapText({
     }
   }, []);
 
-  // Replay animation whenever in view
+  /** Preload GSAP if needed */
+  useEffect(() => {
+    if (useGsap && !gsapRef.current) {
+      import("gsap").then((mod) => {
+        gsapRef.current = mod.gsap;
+      }).catch((e) => {
+        console.warn("GSAP import failed:", e);
+      });
+    }
+  }, [useGsap]);
+
+  /** Observe visibility */
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -56,13 +68,15 @@ export default function AnimatedHoverSwapText({
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            // Reset so it can animate again
+            // Reset animation so it can replay
             lettersRef.current.forEach((el) => {
               if (el) {
                 el.style.animation = "none";
-                void el.offsetWidth;
+                void el.offsetWidth; // reflow
+                el.style.animation = ""; // clear override
               }
             });
+            wrapperRef.current?.classList.remove("ahst-wrapper-fadeout");
             setIsVisible(false);
           }
         });
@@ -74,42 +88,37 @@ export default function AnimatedHoverSwapText({
     return () => observer.disconnect();
   }, []);
 
-  // Run animation when visible
+  /** Animate when visible */
   useEffect(() => {
     if (!isVisible) return;
 
-    if (useGsap) {
-      (async () => {
-        try {
-          const { gsap } = await import("gsap");
-          const letters = lettersRef.current.filter(Boolean);
-          const tl = gsap.timeline({ repeat: loop ? -1 : 0 });
-          tl.fromTo(
-            letters,
-            { y: 8, opacity: 0 },
-            { y: 0, opacity: 1, duration, ease: "power2.out", stagger }
-          );
-          if (fadeOut) {
-            tl.to(wrapperRef.current, {
-              opacity: 0,
-              y: -6,
-              duration: 0.6,
-              delay: outDelay,
-            });
-          }
-        } catch (e) {
-          console.warn("AnimatedHoverSwapText2: GSAP requested but not available.", e);
-        }
-      })();
+    const letters = lettersRef.current.filter(Boolean);
+
+    if (useGsap && gsapRef.current) {
+      const gsap = gsapRef.current;
+      const tl = gsap.timeline({ repeat: loop ? -1 : 0 });
+      tl.fromTo(
+        letters,
+        { y: 8, opacity: 0 },
+        { y: 0, opacity: 1, duration, ease: "power2.out", stagger }
+      );
+      if (fadeOut) {
+        const fadeDelay = Math.max(chars.length * stagger + duration, duration) + outDelay;
+        tl.to(wrapperRef.current, {
+          opacity: 0,
+          y: -6,
+          duration: 0.6,
+          delay: fadeDelay,
+        });
+      }
     } else {
-      const letters = lettersRef.current.filter(Boolean);
       letters.forEach((el, i) => {
         const delay = i * stagger;
         el.style.animation = `ahst-fadeUp ${duration}s cubic-bezier(.2,.9,.2,1) ${delay}s both`;
       });
 
       if (fadeOut) {
-        const totalTime = chars.length * stagger + duration + outDelay;
+        const totalTime = Math.max(chars.length * stagger + duration, duration) + outDelay;
         const t = setTimeout(() => {
           wrapperRef.current?.classList.add("ahst-wrapper-fadeout");
         }, totalTime * 1000);
@@ -118,26 +127,28 @@ export default function AnimatedHoverSwapText({
     }
   }, [isVisible, useGsap, loop, stagger, duration, fadeOut, outDelay, chars.length]);
 
-  // Fixed Inner structure
+  /** Inner content */
   const Inner = () => (
     <>
-      {/* Top text (animated letters) */}
+      {/* Top animated letters */}
       <span
         className="block relative h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
         style={{ display: "inline-flex" }}
       >
         {chars.map((ch, i) => (
           <span
-            key={`${ch}-${i}-top`}
+            key={`letter-${i}`}
             className="ahst-letter"
-            ref={(el) => (lettersRef.current[i] = el)}
+            ref={(el) => {
+              if (el) lettersRef.current[i] = el;
+            }}
           >
             {ch === " " ? "\u00A0" : ch}
           </span>
         ))}
       </span>
 
-      {/* Bottom text (slides in on hover) */}
+      {/* Bottom text */}
       <span
         className="block absolute top-full left-0 h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
         style={{ whiteSpace: "nowrap" }}

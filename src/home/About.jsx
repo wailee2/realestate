@@ -11,7 +11,7 @@ export default function About() {
             <div className="md:max-w-[85%]">
                 <div className="block lg:hidden uppercase text-[50px] md:text-[73px]/17 font-medium tracking-tighter ">
                     <AnimatedWord
-                        text="Designing homes with people at heart"
+                        text="Enhancing property value with people in mind"
                         useGsap={true}
                         stagger={0.08}
                         duration={0.5}
@@ -22,7 +22,7 @@ export default function About() {
                 className="md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%]">
                 <div className="hidden lg:block uppercase md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium tracking-tighter">
                     <AnimatedWord
-                        text="Designing SPACES with"
+                        text="Guiding with"
                         useGsap={true}
                         stagger={0.08}
                         duration={0.5}
@@ -41,7 +41,7 @@ export default function About() {
                             <div className="">
                                 <div className="hidden break-all lg:flex uppercase md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium tracking-tighter">
                                     <AnimatedWord
-                                        text="intent +"
+                                        text="trust +"
                                         useGsap={true}
                                         stagger={0.08}
                                         duration={0.5}
@@ -49,7 +49,7 @@ export default function About() {
                                 </div>
                                 <div className="hidden break-all lg:flex uppercase md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium tracking-tighter">
                                     <AnimatedWord
-                                        text="impact"
+                                        text="expertise"
                                         className=""
                                         useGsap={true}
                                         stagger={0.08}
@@ -62,7 +62,7 @@ export default function About() {
                         <div className="md:max-w-lg space-y-5 lg:text-xl xl:text-2xl">
                             <div>
                                 <AnimatedWord
-                                    text="We work closely with clients right from the start, with clear communication and expert guidance along the way. We also work closely with builders, consultants, and other partners to make sure each project runs smoothly and the final build delivers well beyond our shared aspirations."
+                                    text="We work closely with clients from the outset, providing clear communication and expert guidance. Collaborating with builders, consultants, and partners, we ensure every project runs seamlessly and exceeds expectations."
                                     className=""
                                     useGsap={true}
                                     stagger={0.08}
@@ -72,7 +72,7 @@ export default function About() {
                             
                             <div>
                                 <AnimatedWord
-                                    text="While our aesthetic is recognisable, each project evolves to embody its own shape and character, crafted in response to the aspirations of our clients, the opportunities of the site, and the creative vision of our architectural team."
+                                    text="While our approach is consistent, each project is tailored to reflect the client’s goals, the unique potential of the property, and our professional insight."
                                     className=""
                                     useGsap={true}
                                     stagger={0.08}

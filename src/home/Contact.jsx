@@ -7,7 +7,7 @@ export default function Contact() {
             <div>
                 <div className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium tracking-tighter">
                     <AnimatedWord
-                        text="FOCUSED ON QUALITY"
+                        text="Focused on Value"
                         className=""
                         useGsap={true}
                         stagger={0.08}
@@ -16,7 +16,7 @@ export default function Contact() {
                 </div>
                 <div className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium tracking-tighter">
                     <AnimatedWord
-                        text="DRIVEN BY CREATIVITY"
+                        text="Driven by Expertise"
                         className=""
                         useGsap={true}
                         stagger={0.08}

@@ -1,4 +1,4 @@
-export default function HoverSwapText({ text, href, className = "" }) {
+export default function HoverSwapText2({ text, href, className = "" }) {
   const Inner = () => (
     <>
       <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">

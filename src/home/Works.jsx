@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { works } from "../data/data";
 import HoverSwapText2 from '../components/ui/HoverSwapText2';
+import AnimatedText from "../components/ui/AnimatedText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,13 +59,21 @@ export default function FeaturedWorks() {
       className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-8 overflow-x-hidden"
     >
       <div>
-        <div className="md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%]">
-          <h2 className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium">
-            FEATURED
-          </h2>
-          <h2 className="ml-0 md:ml-[20%] xl:ml-[23%] text-[50px]/11 uppercase md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium">
-            works
-          </h2>
+        <div className="flex flex-col  md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%] uppercase">
+          <AnimatedText
+            text="Featured"
+            className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium"
+            useGsap={true}
+            stagger={0.08}
+            duration={0.5}
+          />
+          <AnimatedText
+            text="works"
+            className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium"
+            useGsap={true}
+            stagger={0.08}
+            duration={0.5}
+          />
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-5 gap-y-10 md:gap-y-15 mt-10 overflow-hidden">
@@ -115,7 +124,7 @@ export default function FeaturedWorks() {
             );
           })}
         </div>
-        <div className="flex justify-center items-center mt-1">
+        <div className="flex justify-center items-center mt-10">
           <div className="px-4 pt-3 pb-[5px] uppercase group bg-black hover:bg-red-700 text-white rounded-4xl">
           <HoverSwapText2
             text="view all works"

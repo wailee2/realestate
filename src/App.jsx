@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react'
 import './index.css'
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
 
@@ -15,8 +16,8 @@ export default function App(){
 
   return (
     <Router>
-      <div className="font-space bg-[#fcfcfc] text-black pt-b16">
-         {/*<Navbar /> */}
+      <div className="font-space bg-[#fcfcfc] text-black pt-b16 tracking-tighter">
+         <Header />
 
         <Routes>
           <Route path="/" element={<Home />} />

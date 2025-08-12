@@ -134,7 +134,7 @@ export default function AnimatedText({
         text="Smooth GSAP Timeline" 
         className="text-2xl mt-8 text-green-400" 
         useGsap={true} 
-        stagger={0.05}
-        duration={0.6}
+        stagger={0.08}
+        duration={0.5}
       />
     </div>*/

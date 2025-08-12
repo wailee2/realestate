@@ -25,7 +25,7 @@ export default function Process() {
 
             </div>
             <div className="flex-1/2">
-                <div className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold md:max-w-[90%] lg:max-w-[87%] xl:max-w-[75%] tracking-tight space-y-17">
+                <div className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold md:max-w-[90%] lg:max-w-[87%] xl:max-w-[75%] space-y-3 tracking-tighter">
                     <div>
                         <AnimatedWord
                             text="Our approach at OH Architecture is designed to make your journey from concept to completion as smooth and enjoyable as possible."

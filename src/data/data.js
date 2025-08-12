@@ -20,7 +20,7 @@ export const works = [
     desc: "Vertical office block.",
     img: img2,
     viewportClass: "",
-    div2Class: "flex",
+    div2Class: "flex justify-between",
     divClass: "flex-row",
     imgClass: "w-[80%] md:w-full"
     //viewportStyle: { perspective: 1200, width: "100%", height: "420px" },
@@ -40,7 +40,7 @@ export const works = [
     title: "Wide Plaza",
     desc: "Public urban space.",
     img: img2,
-    div2Class: "md:flex block",
+    div2Class: "md:flex block justify-between",
     divClass: "flex-col ",
     imgClass: "w-[70%] md:w-[100%]"
   },
@@ -50,7 +50,7 @@ export const works = [
     desc: "Public urban space.",
     viewportClass: "",
     img: img3,
-    div2Class: " flex md:block",
+    div2Class: " flex md:block justify-between",
     divClass: "flex-row",
     imgClass: "w-[80%] md:w-[100%]",
   },
@@ -59,7 +59,7 @@ export const works = [
     title: "Wide Plaza",
     desc: "Public urban space.",
     img: img2,
-    div2Class: "md:flex block",
+    div2Class: "md:flex block justify-between",
     divClass: "flex-col md:flex-row ",
     imgClass: "w-[70%] md:w-[80%]"
   },

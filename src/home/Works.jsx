@@ -96,7 +96,7 @@ export default function FeaturedWorks() {
                 </div>
 
                 <div
-                  className={` ${div2Class}`}
+                  className={` ${div2Class} `}
                 >
                   <div></div>
                   <div>

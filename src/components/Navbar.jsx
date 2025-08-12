@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Contactbut from '../components/ui/Contactbut';
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
-  const [forceMenuVisible, setForceMenuVisible] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -13,10 +13,8 @@ export default function Navbar() {
 
       if (top <= 0) {
         setVisible(true);
-        setForceMenuVisible(true);
       } else {
         setVisible(false);
-        setForceMenuVisible(false);
       }
     };
 
@@ -28,22 +26,23 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-transform duration-500 ease-in-out
+      className={`fixed top-0 right-0  z-20 transition-transform duration-500 ease-in-out
         ${visible ? "translate-y-0" : "-translate-y-full"}`}
+      style={{ width: "auto" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
-          Get in Touch
-        </button>
+      <div className="flex items-center gap-4 px-6 py-4">
+        <div className="flex justify-center uppercase">
+            <Contactbut
+                variant="button"
+                colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"
+                label="get in touch "
+            />
+        </div>
 
         <button
           aria-label="Menu"
-          className={`p-2 rounded border border-gray-400 hover:bg-gray-100 transition
-            ${
-              forceMenuVisible
-                ? "block"
-                : "lg:hidden"
-            }`}
+          className={`p-2 rounded border bg-red-700 border-gray-400 hover:bg-gray-100 transition
+            `}
         >
           Menu
         </button>

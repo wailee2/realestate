@@ -68,7 +68,13 @@ export default function Footer() {
                                 className="cursor-pointer"
                                 />
                             </li>
-                            <li className=''><Contactbut variant="link" /></li>
+                            <li>
+                                <Contactbut
+                                variant="link"
+                                colorClass=""
+                                label="Contact Us "
+                            />
+                            </li>
                         </ul>
                     </div>
                     <div>

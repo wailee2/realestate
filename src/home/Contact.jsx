@@ -25,8 +25,11 @@ export default function Contact() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <Contactbut variant="button" label="ask for relevant cta text for real estate " />
-
+                <Contactbut
+                    variant="button"
+                    colorClass="bg-black px-6 pt-3.5 pb-[9px] uppercase text-white font-medium rounded-4xl group hover:bg-red-700 transition cursor-pointer"
+                    label="ask for relevant cta text for real estate "
+                />
             </div>
         </section>
     );

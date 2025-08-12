@@ -56,7 +56,8 @@ export default function FeaturedWorks() {
   return (
     <section
       ref={sectionRef}
-      className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-8 overflow-x-hidden"
+      className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-8 overflow-x-hidden "
+      id="works"
     >
       <div>
         <div className="flex flex-col  md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%] uppercase">

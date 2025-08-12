@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
+import Contactbut from '../components/ui/Contactbut';
 
 export default function Header() {
   const [headerHidden, setHeaderHidden] = useState(false);
@@ -27,20 +28,28 @@ export default function Header() {
     <>
       {/* Header with logo and nav list */}
       <header
-        className={`fixed top-0 left-0 right-0 bg-white shadow-md z-40 transition-transform duration-500 ease-in-out
+        className={`fixed top-0 left-0 right-0 text-white z-40 transition-transform duration-500 ease-in-out
           ${headerHidden ? "-translate-y-full" : "translate-y-0"}`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className=" px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold">Wailee</div>
 
           {/* Nav list */}
-          <ul className="hidden md:flex gap-8 text-gray-700">
+          <ul className="hidden md:flex gap-8 uppercase text-sm ">
             <li><a href="#works" className="hover:text-green-600">Works</a></li>
             <li><a href="#studio" className="hover:text-green-600">Studio</a></li>
             <li><a href="#process" className="hover:text-green-600">Process</a></li>
             <li><a href="#gallery" className="hover:text-green-600">Gallery</a></li>
           </ul>
+
+          <div>
+            <Contactbut
+                variant="button"
+                colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"
+                label="get in touch "
+            />
+          </div>
         </div>
       </header>
 

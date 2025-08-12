@@ -30,13 +30,13 @@ export default function Contactbut({ variant = "button", label }) {
                 onClick={handleOpen}
                 className={
                     variant === "link"
-                    ? "text-green-500 cursor-pointer"
-                    : "p-3 bg-red-800 text-white font-medium rounded-4xl hover:bg-green-600 transition cursor-pointer"
+                    ? "text-black cursor-pointer"
+                    : "px-6 pt-3.5 pb-[9px] uppercase bg-black text-white font-medium rounded-4xl group hover:bg-red-700 transition cursor-pointer"
                 }
                 >
                 <HoverSwapText2
                     text={label || (variant === "link" ? "Contact Us" : "Get Started Now")}
-                    className={variant === "link" ? "text-green-500" : "text-white"}
+                    className={variant === "link group" ? "text-black" : "text-whites"}
                 />
             </div>
 

@@ -1,4 +1,4 @@
-export default function HoverSwapText2({ text, href, className = "" }) {
+export default function HoverSwapText({ text, href, className = "" }) {
   const Inner = () => (
     <>
       <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-full">
@@ -10,23 +10,15 @@ export default function HoverSwapText2({ text, href, className = "" }) {
     </>
   );
 
+  const baseClasses = `group relative inline-block overflow-hidden ${className}`;
+
   if (href) {
     return (
-      <a
-        href={href}
-        className={`group relative inline-block overflow-hidden ${className}`}
-      >
+      <a href={href} className={baseClasses}>
         <Inner />
       </a>
     );
   }
 
-  // No href → just a span for wrapping in div/button
-  return (
-    <span
-      className={`group relative inline-block overflow-hidden ${className}`}
-    >
-      <Inner />
-    </span>
-  );
+  return <span className={baseClasses}><Inner /></span>;
 }

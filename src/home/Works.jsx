@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { works } from "../data/data";
+import HoverSwapText2 from '../components/ui/HoverSwapText2';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,8 +115,13 @@ export default function FeaturedWorks() {
             );
           })}
         </div>
-        <div className="flex justify-center">
-          <button className="px-4 py-3 mt-13 bg-black text-white rounded-4xl">View All Works</button>
+        <div className="flex justify-center items-center mt-1">
+          <div className="px-4 pt-3 pb-[5px] uppercase group bg-black hover:bg-red-700 text-white rounded-4xl">
+          <HoverSwapText2
+            text="view all works"
+            href="/"
+            className="cursor-pointer  group"
+          /></div>
         </div>
       </div>
     </section>

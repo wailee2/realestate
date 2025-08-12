@@ -64,7 +64,7 @@ export default function Testimonial() {
                   <img
                     src={t.secondImage}
                     alt="Second view"
-                    className="w-full h-full  object-cover transition-all duration-500 group-hover:scale-105 group-hover:blur-[4px]"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-[4px]"
                   />
                   <img
                     src={t.hoverImage}

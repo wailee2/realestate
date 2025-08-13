@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Contactbut from '../components/ui/Contactbut';
-import HoverSwapText2 from "./ui/HoverSwapText2";
+import AnimatedHoverSwapText from "./ui/AnimatedHoverSwapText";
+import AnimatedText from "./ui/AnimatedText";
 import Menu from '../components/ui/Menu';
 
 import { Link } from "react-router-dom";
@@ -36,36 +37,39 @@ export default function Header() {
           ${headerHidden ? "-translate-y-full" : "translate-y-0"}`}
       >
         <div className=" px-6 py-4 flex items-center justify-between uppercase">
-            <Link
-                to="/"
-                className="font-bold ">
-                <span className="text-[22px] md:text-[30px] lg:text-[40px]">Kola Illori & Co</span>
-            </Link>
+            <AnimatedText
+              text="Kola Illori & Co"
+              className="font-bold text-[22px] md:text-[30px] lg:text-[40px] cursor-pointer"
+              to="/"
+              useGsap={true}
+              stagger={0.08}
+              duration={0.5}
+            />
             <div></div>
             <ul className="hidden md:flex gap-8 uppercase font-semibold text-sm ">
                 <li>
-                    <HoverSwapText2
+                    <AnimatedHoverSwapText
                     text="Services"
                     href="#services"
                     className="cursor-pointer"
                     />
                 </li>
                 <li>
-                    <HoverSwapText2
+                    <AnimatedHoverSwapText
                     text="about"
                     href="#about"
                     className="cursor-pointer"
                     />
                 </li>
                 <li>
-                    <HoverSwapText2
+                    <AnimatedHoverSwapText
                     text="Process"
                     href="#process"
                     className="cursor-pointer"
                     />
                 </li>
                 <li>
-                    <HoverSwapText2
+                    <AnimatedHoverSwapText
                     text="portfolio"
                     href="#portfolio"
                     className="cursor-pointer"

@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function AnimatedText({
   text,
+  href = "",      // for external links
+  to = "",        // for React Router links
   className = "",
   useGsap = false,
   loop = false,
@@ -16,6 +19,7 @@ export default function AnimatedText({
   const STYLE_ID = "animated-text-styles";
   const chars = Array.from(text || "");
 
+  // Inject CSS for animations
   useEffect(() => {
     if (!document.getElementById(STYLE_ID)) {
       const style = document.createElement("style");
@@ -45,6 +49,7 @@ export default function AnimatedText({
     }
   }, []);
 
+  // Observe visibility
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -60,14 +65,16 @@ export default function AnimatedText({
     return () => observer.disconnect();
   }, []);
 
+  // Animate letters
   useEffect(() => {
     if (!isVisible) return;
+
+    const letters = lettersRef.current.filter(Boolean);
 
     if (useGsap) {
       (async () => {
         try {
           const { gsap } = await import("gsap");
-          const letters = lettersRef.current.filter(Boolean);
           const tl = gsap.timeline({ repeat: loop ? -1 : 0 });
           tl.fromTo(
             letters,
@@ -82,7 +89,6 @@ export default function AnimatedText({
         }
       })();
     } else {
-      const letters = lettersRef.current.filter(Boolean);
       letters.forEach((el, i) => {
         const d = i * stagger;
         el.style.animation = `at-fadeUp ${duration}s cubic-bezier(.2,.9,.2,1) ${d}s both`;
@@ -98,43 +104,35 @@ export default function AnimatedText({
     }
   }, [isVisible, useGsap, loop, stagger, duration, fadeOut, outDelay, chars.length]);
 
+  // Decide tag: Link, <a>, or <span>
+  let Tag = "span";
+  let tagProps = {};
+  if (to) {
+    Tag = Link;
+    tagProps.to = to;
+  } else if (href) {
+    Tag = "a";
+    tagProps.href = href;
+    tagProps.target = "_blank";
+    tagProps.rel = "noopener noreferrer";
+  }
+
   return (
-    <span ref={wrapperRef} className={`inline-block overflow-hidden leading-tight ${className}`} aria-label={text}>
+    <Tag
+      {...tagProps}
+      ref={wrapperRef}
+      className={`inline-block overflow-hidden leading-tight ${className}`}
+      aria-label={text}
+    >
       {chars.map((ch, i) => (
-        <span key={`${ch}-${i}`} className="at-letter" ref={(el) => (lettersRef.current[i] = el)}>
+        <span
+          key={`${ch}-${i}`}
+          className="at-letter"
+          ref={(el) => (lettersRef.current[i] = el)}
+        >
           {ch === " " ? "\u00A0" : ch}
         </span>
       ))}
-    </span>
+    </Tag>
   );
 }
-
-
-/**
- * usage
- <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
-     */ {/* Default CSS-only stagger */}
-     /** 
-      <AnimatedText 
-        text="Welcome to My Website" 
-        className="text-4xl font-bold" 
-      />*/
-
-      {/* With fade out */}
-      /** 
-      <AnimatedText 
-        text="Fades away after animation" 
-        className="text-xl mt-4" 
-        fadeOut={true}
-        outDelay={1} 
-      />*/
- 
-      {/* Using GSAP */}
-      /**<AnimatedText 
-        text="Smooth GSAP Timeline" 
-        className="text-2xl mt-8 text-green-400" 
-        useGsap={true} 
-        stagger={0.08}
-        duration={0.5}
-      />
-    </div>*/

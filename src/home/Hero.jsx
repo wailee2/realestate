@@ -47,6 +47,7 @@ export default function Hero() {
     <section
       className="relative min-h-screen overflow-hidden text-white bg-[url('/herobg.jpg')] bg-fixed z-5 bg-cover bg-center"
     >
+      <div className="absolute inset-0 bg-black/60"></div>
       {/* DIM OVERLAY (starts transparent, sits above bg but below text) */}
       <div
         ref={overlayRef}

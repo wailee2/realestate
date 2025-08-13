@@ -1,7 +1,8 @@
 // Feature Works
-import img1 from "../assets/featured/featured02.jpg";
-import img2 from "../assets/featured/featured01.jpg";
+import img1 from "../assets/featured/featured01.jpg";
+import img2 from "../assets/featured/featured02.jpg";
 import img3 from "../assets/featured/featured03.jpg";
+import img6 from "../assets/featured/featured06.jpg";
 
 
 export const works = [
@@ -58,16 +59,17 @@ export const works = [
     no: "(06)",
     title: "Wide Plaza",
     desc: "Public urban space.",
-    img: img2,
+    img: img6,
     div2Class: "md:flex block justify-between",
     divClass: "flex-col md:flex-row ",
     imgClass: "w-[70%] md:w-[80%]"
   },
 ];
 
-import testimonialimg from "../assets/featured/featured01.jpg";
-import testimonialimg2 from "../assets/featured/featured03.jpg";
-import testimonialimg3 from "../assets/featured/featured02.jpg";
+import testimonialimg01A from "../assets/Testimonial/testi01_A.jpg";
+import testimonialimg01B from "../assets/Testimonial/testi01_B.jpg";
+import testimonialimg01hover from "../assets/Testimonial/hoverimg01.jpg";
+
 
 export const testimonials = [
   {
@@ -75,54 +77,54 @@ export const testimonials = [
     description:
       '"Buying this home was the best decision I’ve made. The process was seamless and the property exceeded my expectations."',
     ownerName: "John Doe",
-    outsideImage: testimonialimg,
+    outsideImage: testimonialimg01A,
     houseName: "Sunset Villa",
     houseLink: "/product/sunset-villa",
-    secondImage: testimonialimg2,
-    hoverImage: testimonialimg,
+    secondImage: testimonialimg01B,
+    hoverImage: testimonialimg01hover,
   },
   {
     id: 2,
     description:
       "I’m in love with my new home! The neighborhood is peaceful and the architecture is stunning.",
     ownerName: "Jane Smith",
-    outsideImage: testimonialimg3,
+    outsideImage:  testimonialimg01A,
     houseName: "Palm Grove Estate",
     houseLink: "/product/palm-grove",
-    secondImage: testimonialimg3,
-    hoverImage: "/assets/featured/featured01.jpg",
+    secondImage:  testimonialimg01B,
+    hoverImage: testimonialimg01hover,
   },
   {
     id: 3,
     description:
       "From start to finish, the experience was exceptional. The team was incredibly supportive.",
     ownerName: "Michael Johnson",
-    outsideImage: "/images/outside3.jpg",
+    outsideImage:  testimonialimg01A,
     houseName: "Lakeside Haven",
     houseLink: "/product/lakeside-haven",
-    secondImage: "/images/inside3.jpg",
-    hoverImage: "/images/inside3-hover.jpg",
+    secondImage:  testimonialimg01B,
+    hoverImage:  testimonialimg01hover,
   },
   {
     id: 4,
     description:
       "My dream home finally came true. The craftsmanship and design are top-notch.",
     ownerName: "Sarah Lee",
-    outsideImage: "/images/outside4.jpg",
+    outsideImage:  testimonialimg01A,
     houseName: "Mountain View Retreat",
     houseLink: "/product/mountain-view",
-    secondImage: "/images/inside4.jpg",
-    hoverImage: "/images/inside4-hover.jpg",
+    secondImage:  testimonialimg01B,
+    hoverImage:  testimonialimg01hover,
   },
   {
     id: 5,
     description:
       "A beautiful home in a perfect location. I couldn’t have asked for a better investment.",
     ownerName: "David Kim",
-    outsideImage: "/images/outside5.jpg",
+    outsideImage:  testimonialimg01A,
     houseName: "Ocean Breeze Villa",
     houseLink: "/product/ocean-breeze",
-    secondImage: "/images/inside5.jpg",
-    hoverImage: "/images/inside5-hover.jpg",
+    secondImage:  testimonialimg01B,
+    hoverImage:  testimonialimg01hover,
   },
 ];

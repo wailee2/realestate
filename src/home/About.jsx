@@ -5,8 +5,8 @@ export default function About() {
 
 
     return (
-    <section
-        className=" px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-10" id="about">
+    <section 
+        className=" px-3 bg-[#fcfcfc] md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-10" id="about">
         <div>
             <div className="md:max-w-[85%]">
                 <div className="block lg:hidden uppercase text-[50px] md:text-[73px]/17 font-medium tracking-tighter ">

@@ -6,7 +6,7 @@ export default function Process() {
 
   return (
     <section
-        className="px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-10 overflow-x-hidden"
+        className="bg-[#fcfcfc] px-3 md:px-4 mb-15 lg:px-5 xl:px-[1.8%] z-10 pt-10 overflow-x-hidden"
     >
       <div>
         <div className="block md:flex md:gap-10 lg:gap-25 xl:gap-30 overflow-hidden">

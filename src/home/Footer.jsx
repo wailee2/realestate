@@ -27,7 +27,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <section className="border-t-1 border-gray-200 px-3 md:px-4 lg:px-5 xl:px-[1.8%] pt-8 pb-3.5 space-y-10 md:space-y-20 ">
+        <section className="bg-[#fcfcfc] border-t-1 border-gray-200 px-3 md:px-4 lg:px-5 xl:px-[1.8%] pt-8 pb-3.5 space-y-10 md:space-y-20 ">
             <div className="md:flex flex-row-reverse justify-between space-y-9.5 md:gap-[6%] lg:gap-[0]">
                 <div className="space-y-9.5 flex-1 md:flex justify-around">
                     <div className=" ">

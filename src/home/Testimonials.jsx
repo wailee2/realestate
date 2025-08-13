@@ -92,7 +92,7 @@ export default function Testimonial() {
           ▶
         </button>
 
-        {/* Pagination dots */}
+        {/* Pagination dots 
         <div
           className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
           {testimonials.map((_, idx) => (
@@ -104,7 +104,7 @@ export default function Testimonial() {
             }`}
           />
           ))} 
-        </div>
+        </div>*/}
       </section>
   );
 }

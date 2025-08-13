@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
-import Contactbut from '../components/ui/Contactbut';
+import Contactbut from './ui/Contactbut';
 import AnimatedHoverSwapText from "./ui/AnimatedHoverSwapText";
 import AnimatedText from "./ui/AnimatedText";
-import Menu from '../components/ui/Menu';
+import Menu from './ui/Menu';
 
 import { Link } from "react-router-dom";
 

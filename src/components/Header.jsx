@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
-import Contactbut from './ui/ContactButton';
+import ContactButton from './ui/ContactButton';
 import AnimatedHoverSwapText from "./ui/AnimatedHoverSwapText";
 import AnimatedText from "./ui/AnimatedText";
 import Menu from './ui/Menu';
@@ -79,7 +79,7 @@ export default function Header() {
                 
             <div className="flex items-center">
                 <div className="hidden md:block">
-                    <Contactbut
+                    <ContactButton
                         variant="button"
                         colorClass="bg-black px-6 pt-2.5 pb-[5px] uppercase text-white font-medium rounded-4xl text-sm group hover:bg-red-700 transition cursor-pointer"
                         label="get in touch "

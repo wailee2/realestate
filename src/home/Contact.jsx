@@ -1,4 +1,4 @@
-import Contactbut from '../components/ui/Contactbut';
+import Contactbut from '../components/ui/ContactButton';
 import AnimatedWord from "../components/ui/AnimatedWord";
 
 export default function Contact() {

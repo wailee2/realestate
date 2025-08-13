@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
-import Contactbut from './ui/Contactbut';
+import Contactbut from './ui/ContactButton';
 import AnimatedHoverSwapText from "./ui/AnimatedHoverSwapText";
 import AnimatedText from "./ui/AnimatedText";
 import Menu from './ui/Menu';

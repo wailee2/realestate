@@ -1,5 +1,5 @@
 import { useState, useEffect, } from "react";
-import Contactbut from '../components/ui/Contactbut';
+import Contactbut from '../components/ui/ContactButton';
 import HoverSwapText2 from '../components/ui/HoverSwapText2';
 import HoverUnderline from '../components/ui/HoverUnderline';
 import footerimg from "../assets/footerimg.jpg";

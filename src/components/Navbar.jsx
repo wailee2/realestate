@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Contactbut from '../components/ui/Contactbut';
+import Contactbut from './ui/ContactButton';
 import Menu from '../components/ui/Menu';
 
 export default function Navbar() {

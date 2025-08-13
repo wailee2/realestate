@@ -28,7 +28,7 @@ export default function Contact() {
                 <Contactbut
                     variant="button"
                     colorClass="bg-black px-6 pt-3.5 pb-[9px] uppercase text-white font-medium rounded-4xl group hover:bg-red-700 transition cursor-pointer"
-                    label="ask for relevant cta text for real estate "
+                    label="Start Your Investment Journey "
                 />
             </div>
         </section>

@@ -1,4 +1,4 @@
-import processimg from "../assets/featured/featured03.jpg";
+import processimg from "../assets/processimg.jpg";
 import AnimatedWord from "../components/ui/AnimatedWord";
 
 export default function Process() {

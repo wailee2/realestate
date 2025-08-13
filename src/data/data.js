@@ -2,6 +2,8 @@
 import img1 from "../assets/featured/featured01.jpg";
 import img2 from "../assets/featured/featured02.jpg";
 import img3 from "../assets/featured/featured03.jpg";
+import img4 from "../assets/featured/featured04.jpg";
+import img5 from "../assets/featured/featured05.jpg";
 import img6 from "../assets/featured/featured06.jpg";
 
 
@@ -17,8 +19,8 @@ export const works = [
   },
   {
     no: "(02)",
-    title: "Tall Tower",
-    desc: "Vertical office block.",
+    title: "Modern House",
+    desc: "Modern House.",
     img: img2,
     viewportClass: "",
     div2Class: "flex justify-between",
@@ -29,8 +31,8 @@ export const works = [
   },
   {
     no: "(03)",
-    title: "Wide Plaza",
-    desc: "Public urban space.",
+    title: "Tall Tower",
+    desc: "Vertical office block.",
     viewportClass: "",
     img: img3,
     divClass: "flex-col",
@@ -38,9 +40,9 @@ export const works = [
   },
   {
     no: "(04)",
-    title: "Wide Plaza",
-    desc: "Public urban space.",
-    img: img2,
+    title: "Tall Tower",
+    desc: "Vertical office block.",
+    img: img4,
     div2Class: "md:flex block justify-between",
     divClass: "flex-col ",
     imgClass: "w-[70%] md:w-[100%]"
@@ -50,15 +52,15 @@ export const works = [
     title: "Wide Plaza",
     desc: "Public urban space.",
     viewportClass: "",
-    img: img3,
+    img: img5,
     div2Class: " flex md:block justify-between",
     divClass: "flex-row",
     imgClass: "w-[80%] md:w-[100%]",
   },
   {
     no: "(06)",
-    title: "Wide Plaza",
-    desc: "Public urban space.",
+    title: "Modern Villa",
+    desc: "Luxury residential project.",
     img: img6,
     div2Class: "md:flex block justify-between",
     divClass: "flex-col md:flex-row ",

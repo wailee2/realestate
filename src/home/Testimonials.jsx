@@ -100,7 +100,7 @@ export default function Testimonial() {
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`w-3 h-3 rounded-full ${
-            current === idx ? "bg-green-600" : "bg-gray-300"
+            current === idx ? "bg-red-700" : "bg-gray-300"
             }`}
           />
           ))} 

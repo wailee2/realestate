@@ -87,8 +87,8 @@ export default function Menu({ className = "" }) {
                 </li>
                 <li>
                     <AnimatedHoverSwapText
-                    text="portfolio"
-                    href="/portfolio"
+                    text="properties"
+                    href="/property-catalogue"
                     className="cursor-pointer"
                     />
                 </li>

@@ -62,7 +62,7 @@ export default function FeaturedWorks() {
       <div>
         <div className="flex flex-col  md:max-w-[70%] lg:max-w-[60%] xl:max-w-[70%] uppercase">
           <AnimatedText
-            text="Portfolio"
+            text="Property"
             className="uppercase text-[50px]/12 md:text-[73px]/20 lg:text-[89px]/20 xl:text-[120px]/28 font-medium"
             useGsap={true}
             stagger={0.08}
@@ -129,7 +129,7 @@ export default function FeaturedWorks() {
           <div className="px-4 pt-3 pb-[5px] uppercase group bg-black hover:bg-red-700 text-white rounded-4xl">
           <HoverSwapText2
             text="view all works"
-            href="/"
+            href="/property-catalogue"
             className="cursor-pointer  group"
           /></div>
         </div>

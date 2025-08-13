@@ -2,7 +2,7 @@ import { useState, useEffect, } from "react";
 import Contactbut from '../components/ui/Contactbut';
 import HoverSwapText2 from '../components/ui/HoverSwapText2';
 import HoverUnderline from '../components/ui/HoverUnderline';
-import testimonialimg3 from "../assets/featured/featured02.jpg";
+import footerimg from "../assets/footerimg.jpg";
 import logo from '../assets/icon.png'
 import { Link } from "react-router-dom";
 import React from "react";
@@ -64,8 +64,8 @@ export default function Footer() {
                             </li>
                             <li>
                                 <HoverSwapText2
-                                text="Portfolio"
-                                href="/portfolio"
+                                text="Properties"
+                                href="/property-catalogue"
                                 className="cursor-pointer"
                                 />
                             </li>
@@ -108,8 +108,8 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="md:max-w-[25%] flex-1">
-                    <img src={testimonialimg3} alt="" className="w-full" />
+                <div className="md:max-w-[23%] flex-1">
+                    <img src={footerimg} alt="" className="w-full" />
                     <img src={logo} alt="Logo" className="w-full"/>
                 </div>
             </div>

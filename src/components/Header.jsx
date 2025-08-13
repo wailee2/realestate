@@ -70,8 +70,8 @@ export default function Header() {
                 </li>
                 <li>
                     <AnimatedHoverSwapText
-                    text="portfolio"
-                    href="#portfolio"
+                    text="properties"
+                    to="/property-catalogue"
                     className="cursor-pointer"
                     />
                 </li>

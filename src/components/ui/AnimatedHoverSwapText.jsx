@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom"; // Add this
 
 export default function AnimatedHoverSwapText({
   text,
   href,
+  to, // NEW: for React Router
   className = "",
   useGsap = false,
   loop = false,
@@ -52,11 +54,13 @@ export default function AnimatedHoverSwapText({
   /** Preload GSAP if needed */
   useEffect(() => {
     if (useGsap && !gsapRef.current) {
-      import("gsap").then((mod) => {
-        gsapRef.current = mod.gsap;
-      }).catch((e) => {
-        console.warn("GSAP import failed:", e);
-      });
+      import("gsap")
+        .then((mod) => {
+          gsapRef.current = mod.gsap;
+        })
+        .catch((e) => {
+          console.warn("GSAP import failed:", e);
+        });
     }
   }, [useGsap]);
 
@@ -68,12 +72,11 @@ export default function AnimatedHoverSwapText({
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            // Reset animation so it can replay
             lettersRef.current.forEach((el) => {
               if (el) {
                 el.style.animation = "none";
-                void el.offsetWidth; // reflow
-                el.style.animation = ""; // clear override
+                void el.offsetWidth;
+                el.style.animation = "";
               }
             });
             wrapperRef.current?.classList.remove("ahst-wrapper-fadeout");
@@ -91,7 +94,6 @@ export default function AnimatedHoverSwapText({
   /** Animate when visible */
   useEffect(() => {
     if (!isVisible) return;
-
     const letters = lettersRef.current.filter(Boolean);
 
     if (useGsap && gsapRef.current) {
@@ -130,7 +132,6 @@ export default function AnimatedHoverSwapText({
   /** Inner content */
   const Inner = () => (
     <>
-      {/* Top animated letters */}
       <span
         className="block relative h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
         style={{ display: "inline-flex" }}
@@ -148,7 +149,6 @@ export default function AnimatedHoverSwapText({
         ))}
       </span>
 
-      {/* Bottom text */}
       <span
         className="block absolute top-full left-0 h-[1em] leading-none transition-transform duration-300 ease-out group-hover:-translate-y-full"
         style={{ whiteSpace: "nowrap" }}
@@ -159,6 +159,14 @@ export default function AnimatedHoverSwapText({
   );
 
   const baseClasses = `group relative inline-block overflow-hidden ${className}`;
+
+  if (to) {
+    return (
+      <Link to={to} className={baseClasses} ref={wrapperRef}>
+        <Inner />
+      </Link>
+    );
+  }
 
   if (href) {
     return (

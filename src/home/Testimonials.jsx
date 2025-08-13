@@ -22,7 +22,7 @@ export default function Testimonial() {
 
     return (
       <section
-        className="bg-[#fcfcfc] relative w-full overflow-hidden bg-gray-50 mb-17 px-3 md:px-4 lg:px-5 xl:px-[1.8%]">
+        className=" relative w-full overflow-hidden bg-gray-50 mb-17 px-3 md:px-4 lg:px-5 xl:px-[1.8%]">
         <div className="mb-3">
           <span className="uppercase font-semibold">(hear from our clients)</span>
         </div>
